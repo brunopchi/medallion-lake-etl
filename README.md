@@ -71,7 +71,7 @@
 
 # Monitoring and alerting
 
-    As mentioned in [Azure documentation](https://learn.microsoft.com/en-us/azure/data-factory/monitor-data-factory#monitoring-methods) Its possible to monitor all Data Factory pipeline runs natively in Azure Data Factory Studio. To open the monitoring experience, select "Launch Studio" from your Data Factory page in the Azure portal, and in Azure Data Factory Studio, select "Monitor" from the left menu. This project has the visually monitor option enabled.
+    As mentioned in Azure documentation: https://learn.microsoft.com/en-us/azure/data-factory/monitor-data-factory#monitoring-methods. Its possible to monitor all Data Factory pipeline runs natively in Azure Data Factory Studio. To open the monitoring experience, select "Launch Studio" from your Data Factory page in the Azure portal, and in Azure Data Factory Studio, select "Monitor" from the left menu. This project has the visually monitor option enabled.
 
     Data Facotry has several options for alerting such as: metric alerts, log search alerts, activity log alerts, etc. In this project, log alerts were not implemented due to the associated additional cost and low need for alerts.
 
