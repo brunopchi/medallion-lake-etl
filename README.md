@@ -24,7 +24,7 @@
 
     bronze_to_silver.py: file responsible for transitioning data from bronze to silver layer. Converts information stored in json to partitioned columnar format. It also performs cleaning of completely null columns.
 
-    silver_to_gold.py: file responsible for transitioning data from silver to gold layer. Creates an aggregated view with the quantity of breweries per type and location and save in a partitioned columnar format.
+    silver_to_gold.py: file responsible for transitioning data from silver to gold layer. Creates an aggregated view with the quantity of breweries per type and location and save in a partitioned columnar format. By location I considered "postal_code" column. But could be a composition of more partitions like "country", "state", etc.
     
     check_results.py: small script to check the results in silver and gold layers.
 
