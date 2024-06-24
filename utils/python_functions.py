@@ -69,18 +69,23 @@ def drop_null_columns(spark_df):
         df (DataFrame): DataFrame with null columns removed
     """
 
-    columns_to_drop = []
+    try:
+        columns_to_drop = []
 
-    for col_name in spark_df.columns:
-        
-        non_null_count = spark_df.filter(col(col_name).isNotNull()).count()
-        
-        if non_null_count == 0:
-            columns_to_drop.append(col_name)
+        for col_name in spark_df.columns:
+
+            non_null_count = spark_df.filter(col(col_name).isNotNull()).count()
+
+            if non_null_count == 0:
+                columns_to_drop.append(col_name)
+
+        df = spark_df.drop(*columns_to_drop)
+
+        return df
     
-    df = spark_df.drop(*columns_to_drop)
-    
-    return df
+    except Exception as err:
+        print(err.args)
+        raise
 
 
 # COMMAND ----------
