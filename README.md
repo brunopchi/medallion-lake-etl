@@ -7,6 +7,7 @@
 ## Repository folder structure
 
 ```bash
+├── images
 ├── test
 │   └── unit_test.py
 ├── utils
@@ -16,7 +17,9 @@
 └── check_results.py
 ```
 
-## Files
+## Folders and Files
+
+    images: folder that contains reference images of the project.
 
     unit_test.py: file responsible for unit test coverage of functions created for ETL.
 
